@@ -7,7 +7,7 @@ Project has been tested on python 2.7 environment. All the required dependencies
 
 ## Part 1
 ### Goal
-Build a pipeline that is given input directories, it should loads required data, find relationships between data, and return a list of tuples each containing an individual data point.
+Build a pipeline that is given input directories, it should load required data, find relationships between data, and return a list of tuples each containing an individual data point.
 
 ### Solution
 [data_pipeline.py](https://github.com/harishasan/ml_pipeline/blob/master/core/data_pipeline.py) contains the driver code for this part. It has a method `load_all_data` which performs the required operation. To run this part, go to [main.py](https://github.com/harishasan/ml_pipeline/blob/master/main.py) and un-comment line #48 and run following command on terminal:
@@ -16,7 +16,7 @@ Build a pipeline that is given input directories, it should loads required data,
 
 Few details about the solution:
 
-#### Ensuring Correctness of Contour Parsing**
+#### Ensuring Correctness of Contour Parsing
 This has been achieved at three levels.
  1. Manual testing.
  2. A unit test for contour parser to ensure it loads data correctly.
@@ -31,10 +31,10 @@ This has been achieved at three levels.
  5. A [requirements.txt](https://github.com/harishasan/ml_pipeline/blob/master/requirements.txt) has been added to smoothly manage dependencies.
 
 ####  Parallelizing Operations for Scale
-There can be multiple ways to scale it. Within a single process, multiple threads can be used to perform operations in parallel. DataPoint wrapper can come handy here. It can encapsulate one data point which then can be loaded by any available worker thread. Another way, which is implemented in part 2, is to use messages queues. This enables different processes and even different nodes to process the data in parallel.
+There can be multiple ways to scale it. Within a single process, multiple threads can be used to perform operations in parallel. DataPoint wrapper can come handy here. It can encapsulate one data point which then can be loaded by any available worker thread. Another way, which is implemented in part 2, is to use message queues. This enables different processes and even different nodes to process the data in parallel.
 
 ####  Error Checking in Parallel Approach
-A distributed approach will require challenges which are faced by any distributed or parallel system. For example, if a thread or process crashes what happens to data point it was handling? How to ensure it still gets processed and is not lost. We might need some ack based mechanism to ensure all data points gets processed. Similarly, not applicable in current implementation, but if there are data structures maintaining common state then they have to be thread safe.
+A distributed approach will require challenges which are faced by any distributed or parallel system. For example, if a thread or process crashes what happens to data point it was handling? How to ensure message still gets processed and is not lost. We might need some ack based mechanism to ensure all data points gets processed. Similarly, not applicable in current implementation, but if there are data structures maintaining common state then they have to be thread safe.
 
 ## Part 2:
 ### Goal
@@ -43,7 +43,7 @@ Build a pipeline that produces batch of 8 data points, in form of two arrays, in
 ### Solutions
 The core logic of this pipeline is written in [TrainPipeline](https://github.com/harishasan/ml_pipeline/blob/master/core/TrainPipeline.py) class.  After initially finding the data points using `load_data` method, this class sends data loading request to a separate process by putting a message in a Kafka message queue.  The drive program is [main.py](https://github.com/harishasan/ml_pipeline/blob/master/main.py) which sends a load request every 3 seconds.
 
-A separate process written in [async_data_loader.py](https://github.com/harishasan/ml_pipeline/blob/master/services/async_data_loader.py) listens to kafka topic, processes the received message by loading data and creating two result arrays, and puts the result back to another Kafka topic. This way, any process who is interested in ready to use training data, just need to pick a messages from Kafka topic.
+A separate process written in [async_data_loader.py](https://github.com/harishasan/ml_pipeline/blob/master/services/async_data_loader.py) listens to kafka topic, processes the received message by loading data and creating two result arrays, and puts the result back to another Kafka topic. This way, any process who is interested in ready to use training data just needs to pick a message from Kafka topic.
 
 To run this independent process, execute following command on terminal:
 
@@ -55,7 +55,7 @@ But keep in mind this requires running kafka and zookeeper. I ran these two serv
     sh $KAFKA_BIN_PATH/zookeeper-server-start.sh $KAFKA_BIN_PATH/../config/zookeeper.properties
     sh $KAFKA_BIN_PATH/kafka-server-start.sh $KAFKA_BIN_PATH/../config/server.properties
 
-*Please note, I have not implemented this receiver who listens to this new Kafka topic because (1) we are not doing the actual training here (2) Concept of listening to a Kafka topic and working on messages is already shown in `async_data_loader.py`.*
+*Please note, I have not implemented the receiver who listens to this new Kafka topic because (1) we are not doing the actual training here (2) Concept of listening to a Kafka topic and working on messages is already shown in `async_data_loader.py`.*
 
 Let's now discuss various aspects of this solutions.
 
@@ -66,7 +66,7 @@ The main idea is to off load data loading to a separate process. This requires i
 3. Third option was message queues and I chose it because its simple, fault tolerant, scalable to various threads, processes and even nodes.
 
 ### Error Checking and/or Safeguards
- good thing about messages queues like Kafka is that they provides builtin fault tolerance and replication. The exact configuration of brokers, topics, and partitions would need a bit more thinking, calculations and performance bench-marking. Another important aspect to think about is to scale the worker or consumer side according to the load in message queue. Kafka's concept of consumer groups can come handy here, as it allows different works to work on the same queue by acting like a team.
+Cool thing about message queues like Kafka is that they provides builtin fault tolerance and replication. The exact configuration of brokers, topics, and partitions would need a bit more thinking, calculations and performance bench-marking. Another important aspect to think about is scaling of the worker or consumer side according to the load in message queue. Kafka's concept of consumer groups can come handy here, as it allows different workers to work on the same queue by acting like a team.
 
 ### Changes and Future Considerations
  There were some minor changes but nothing major. I recall I added serialization and deserialization methods in the DataPoint class to pass messages through the message queue.
