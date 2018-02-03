@@ -1,0 +1,42 @@
+2018-02-03 23:04:20,716 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/82.dcm
+2018-02-03 23:04:20,716 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/83.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/84.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/85.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/86.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/87.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/88.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/90.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/91.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/92.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/93.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/94.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/95.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/96.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/97.dcm
+2018-02-03 23:04:20,717 - core.data_pipeline - INFO - no contour file found against: /Users/haris/PycharmProjects/ml_pipeline/data/final_data/dicoms/SCD0000501/98.dcm
+2018-02-03 23:04:20,717 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:23,720 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:26,726 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:29,732 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:32,737 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:35,742 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:38,747 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:41,753 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:44,759 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:47,765 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:50,770 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:53,775 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:56,780 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:04:59,786 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:02,792 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:05,795 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:08,797 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:11,802 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:14,808 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:17,813 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:20,816 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:23,821 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:26,827 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:29,833 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:32,837 - __main__ - INFO - requesting new batch of 8
+2018-02-03 23:05:35,843 - __main__ - INFO - requesting new batch of 8

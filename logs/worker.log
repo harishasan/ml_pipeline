@@ -1,0 +1,20 @@
+2018-02-03 23:09:37,052 - kafka.client - INFO - Bootstrapping cluster metadata from [('localhost', 9092, 0)]
+2018-02-03 23:09:37,054 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=localhost/::1 port=9092>: connecting to ::1:9092
+2018-02-03 23:09:37,055 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 4 topics.
+2018-02-03 23:09:37,055 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=localhost/::1 port=9092>: Closing connection. 
+2018-02-03 23:09:37,056 - kafka.conn - INFO - <BrokerConnection node_id=0 host=192.168.100.3/192.168.100.3 port=9092>: connecting to 192.168.100.3:9092
+2018-02-03 23:09:37,162 - kafka.conn - INFO - Broker version identifed as 0.10.1
+2018-02-03 23:09:37,162 - kafka.conn - INFO - Set configuration api_version=(0, 10, 1) to skip auto check_version requests on startup
+2018-02-03 23:09:37,164 - kafka.coordinator.consumer - WARNING - group_id is None: disabling auto-commit.
+2018-02-03 23:09:37,164 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('LOAD_DATA_REQUEST_FOR_ML',)
+2018-02-03 23:09:37,165 - __main__ - INFO - wating for message in queue
+2018-02-03 23:09:37,166 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='LOAD_DATA_REQUEST_FOR_ML', partition=0)]
+2018-02-03 23:09:39,339 - __main__ - INFO - message processed successfully
+2018-02-03 23:09:42,346 - __main__ - INFO - message processed successfully
+2018-02-03 23:09:45,362 - __main__ - INFO - message processed successfully
+2018-02-03 23:09:48,362 - __main__ - INFO - message processed successfully
+2018-02-03 23:09:51,347 - __main__ - INFO - message processed successfully
+2018-02-03 23:09:54,345 - __main__ - INFO - message processed successfully
+2018-02-03 23:09:57,352 - __main__ - INFO - message processed successfully
+2018-02-03 23:10:00,349 - __main__ - INFO - message processed successfully
+2018-02-03 23:10:03,370 - __main__ - INFO - message processed successfully
